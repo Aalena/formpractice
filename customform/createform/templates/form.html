@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Create form{% endblock %}</title>
+    {% block stylesheet %}
+        <style>
+            .form_class{
+                margin-top: 15px;
+            }
+        </style>
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+<div class="container form_class">
+<form>
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="positionID" class="col-form-label">POSITION ID</label>
+            <input type="text" class="form-control" id="positionID" placeholder="Enter Position ID">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="npn" class="col-form-label">NPN</label>
+            <input type="text" class="form-control" id="npn" placeholder="Enter NPN number">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6">
+          <label for="firstName" class="col-form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="First name">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="lastName" class="col-form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="Last name">
+        </div>
+    </div>
+    <div class="form-group">
+          <label for="inputEmail" class="col-form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+    </div>
+    <div class="row">
+        <div class="form-group col-md-4">
+          <label for="positionStatus" class="col-form-label">Position Status</label>
+          <input type="password" class="form-control" id="positionStatus" placeholder="Enter Position Status">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="homeDepartmentCode" class="col-form-label">Home Department Code</label>
+            <input type="text" class="form-control" id="homeDepartmentCode" placeholder="Enter your home department">
+        </div>
+        <div class="form-group col-md-4">
+          <label for="location" class="col-form-label">Location</label>
+          <select class="form-control custom-select" id="location"> <!--custom select gives two arrows-->
+              <option>Alaska</option>
+              <option>Alabama</option>
+              <option>Hawaii</option>
+              <option>Nebraska</option>
+              <option>New York</option>
+          </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="jobDescription">JOB Description</label>
+        <textarea class="form-control" rows="4" id="jobDescription"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock %}
+</body>
+</html>
