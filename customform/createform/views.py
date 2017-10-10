@@ -4,5 +4,5 @@ from django.shortcuts import render
 
 
 def customform(request):
-    
+
     return render(request,'form.html')
